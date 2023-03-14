@@ -1,0 +1,438 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-image: url("background.jpg"); */
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+h1 {
+  margin-bottom: 0;
+}
+#searchForm {
+  width: 500px;
+  padding: 20px;
+  background-color: rgba(143, 143, 143, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: rgb(153, 197, 223);
+}
+input[type="text"],
+input[type="number"],
+select {
+  display: block;
+  width: 95%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.distance-input {
+  flex-grow: 0.1;
+  width: 30% !important;
+  margin-right: 100px;
+}
+
+.location-and-checkbox-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.loc-label {
+  margin-right: 10px;
+}
+
+.loc-checkbox {
+  margin-right: 7px;
+  margin-top: 22px;
+}
+
+.loc-check-label {
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+
+  margin-top: 20px;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: rgb(237, 117, 47);
+  margin-right: 5px;
+  box-shadow: 0px 5px 0.5px rgb(232, 89, 40);
+}
+.submit-btn:hover {
+  background-color: rgba(245, 178, 137, 0.899);
+}
+
+.clear-btn {
+  background-color: rgb(86, 110, 168);
+  box-shadow: 0px 5px 0.5px rgb(59, 76, 117);
+}
+.clear-btn:hover {
+  background-color: rgba(138, 167, 236, 0.776);
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.form-heading {
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+
+hr {
+  color: white;
+}
+
+.distance-and-category-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.category-flex {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 3;
+}
+
+.star {
+  color: red;
+}
+
+.formRow {
+  justify-content: flex-start;
+  column-gap: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.formRowKeyword {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.formRowItem {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+#location {
+  display: flex;
+}
+
+/* #locationInput {
+  background-color: red;
+} */
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: white;
+}
+th,
+td {
+  padding: 5px;
+  text-align: center;
+}
+th {
+  box-shadow: 0.3px 5px 10px grey;
+}
+img {
+  width: 100px;
+}
+
+.events-table-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.card-holder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  background-color: rgba(128, 128, 128, 0.4);
+  border-radius: 15px;
+  padding: 20px 40px 30px 40px;
+  height: auto;
+}
+
+.seatmap {
+  width: 500px;
+  min-height: 300px;
+}
+
+.event-detail-headers {
+  font-size: large;
+  color: rgb(116, 255, 221);
+  margin: 0px;
+}
+
+.event-detail-values {
+  font-size: small;
+  color: white;
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+
+.event-details-heading {
+  color: white;
+  font-size: x-large;
+}
+
+.event-details-card__ticket-status--onsale {
+  background-color: green;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 4px 8px;
+}
+.event-details-card__ticket-status--offsale {
+  background-color: red;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 4px 8px;
+}
+.event-details-card__ticket-status--cancelled {
+  background-color: black;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 4px 8px;
+}
+.event-details-card__ticket-status--postponed {
+  background-color: orange;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 4px 8px;
+}
+
+.event-detail-anchor {
+  color: rgb(75, 156, 194);
+  display: inline-block;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.arrow-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.arrow {
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  opacity: 0.5;
+}
+
+.arrow:hover {
+  transform: translateY(5px);
+  opacity: 1; /* Change the opacity on hover */
+}
+
+.arrow-label-div {
+  color: white;
+  margin-bottom: 0px;
+  height: 35px;
+}
+
+.venue-column-flex {
+  display: flex;
+  flex-direction: column;
+  width: 847px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.venue-details-heading {
+  display: flex;
+  padding-bottom: 4px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  text-align: center;
+  width: max-content;
+}
+
+.venue-details-heading-container {
+  display: flex;
+  justify-content: center;
+}
+
+.venue-row-flex {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.venue-address-div {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding-right: 10px;
+  border-right: 1px solid black;
+}
+
+.address-row-div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.address-label {
+  margin-top: 2px;
+  font-weight: bold;
+}
+
+.venue-address-values-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-google-link {
+  display: flex;
+  color: rgb(90, 156, 183);
+  text-decoration: none;
+}
+.address-google-link:hover {
+  color: rgb(125, 114, 197);
+  cursor: pointer;
+}
+.venue-more-events-link {
+  display: inline-block;
+  margin-top: 2px;
+  color: rgb(90, 156, 183);
+  text-decoration: none;
+}
+
+.venue-more-events-link:hover {
+  color: rgb(125, 114, 197);
+  cursor: pointer;
+}
+
+.venue-more-events {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.venue-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  border-radius: 15px;
+  padding: 40px;
+  background-color: rgb(249, 249, 249);
+  margin-top: 50px;
+}
+
+.address-line1,
+.city-state-code,
+.postal-code {
+  display: flex;
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+
+.address-google-link-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.venue-image {
+  width: 100px;
+}
+.venue-image-div {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.background-image {
+  position: fixed;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  min-width: 1000px;
+  z-index: -1;
+}
+
+.event-details-name-cell-text {
+}
+.event-details-name-cell-text:hover {
+  color: rgb(117, 88, 232);
+  cursor: pointer;
+}
+
+.error-paragraph {
+  display: none;
+  background-color: white;
+  color: red;
+  width: 80%;
+  text-align: center;
+}
+
+/* .table_headers {
+  box-shadow: 3px 5px 10px grey;
+} */
